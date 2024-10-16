@@ -19,6 +19,17 @@ namespace TP.FunctionalProgramming
   [TestClass]
   public class AnonymousFunctionsUnitTest
   {
+    /// <summary>
+    /// While raising this delegate variable the null-conditional operator is not applied.
+    /// Hence, this argument must not be null to prevent throwing an exception.
+    /// </summary>
+    [TestMethod]
+    public void NullCallBack()
+    {
+      AnonymousFunctions _newInstance = new AnonymousFunctions();
+      Assert.ThrowsException<NullReferenceException>(() => _newInstance.ConsistencyCheck(null));
+    }
+
     [TestMethod]
     public void NamedMethodCallBackTest()
     {
@@ -91,6 +102,7 @@ namespace TP.FunctionalProgramming
       _newInstance.CurrentStateHandler.GoToIdle();
       Assert.AreEqual<State>(State.Idle, _currentState);
       //_newInstance.OnStateChanged(_newInstance, _newInstance.CurrentStateHandler.CurrentState);  //Error CS0070  The event 'AnonymousFunctions.OnStateChanged' can only appear on the left hand side of += or -= (except when used from within the type 'AnonymousFunctions')
+      //_newInstance.OnStateChanged = null;  //Error CS0070  The event 'AnonymousFunctions.OnStateChanged' can only appear on the left hand side of += or -= (except when used from within the type 'AnonymousFunctions')
     }
 
     #region Instrumentation
