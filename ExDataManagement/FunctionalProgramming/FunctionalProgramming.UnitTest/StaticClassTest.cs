@@ -9,26 +9,33 @@
 //_____________________________________________________________________________________________________________________________________
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TP.FunctionalProgramming;
 
-namespace TP.FunctionalProgramming
+namespace TP.ExDM.FunctionalProgramming
 {
   [TestClass]
   public class StaticClassTest
   {
-
     // public StaticClass staticClassVariable; //Cannot declare a variable of static type 'StaticClass'
 
     [TestMethod]
     public void StaticClassTestMethod()
     {
+      #region Implicit constructor call
 
-      //StaticClass staticVariable;
       Assert.AreEqual(123456.789, StaticClass.MinIncome);
       Assert.AreEqual(987654.321, StaticClass.MaxIncome);
-      StaticClass.StaticClassInitializer(3.0, 1.0);
+
+      #endregion Implicit constructor call
+
+      #region state behavior
+
+      StaticClass.StaticClassInitializer(3.0, 1.0); //Invocation of a static method from static class
       Assert.AreEqual(1.0, StaticClass.MinIncome);
       Assert.AreEqual(3.0, StaticClass.MaxIncome);
       Assert.AreEqual(2.0, StaticClass.AverageIncome);
+
+      #endregion state behavior
     }
   }
 }

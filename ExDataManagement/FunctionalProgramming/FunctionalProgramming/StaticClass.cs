@@ -13,8 +13,9 @@ namespace TP.FunctionalProgramming
 {
   /// <summary>
   /// Class StaticClass - demonstrates:
-  ///   - initialization
+  ///   - initialization using implicit constructor call
   ///   - state behavior
+  ///   - Invocation of a static method from static class
   /// </summary>
   public static class StaticClass
   {
