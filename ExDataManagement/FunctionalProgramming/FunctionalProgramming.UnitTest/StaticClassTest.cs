@@ -6,7 +6,6 @@
 //
 //  https://github.com/mpostol/TP/discussions/182
 //
-//  by introducing yourself and telling us what you do with this community.
 //_____________________________________________________________________________________________________________________________________
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -16,10 +15,12 @@ namespace TP.FunctionalProgramming
   [TestClass]
   public class StaticClassTest
   {
+
+    // public StaticClass staticClassVariable; //Cannot declare a variable of static type 'StaticClass'
+
     [TestMethod]
     public void StaticClassTestMethod()
     {
-      // StaticClass staticClassVariable; //Cannot declare a variable of static type 'StaticClass'
 
       //StaticClass staticVariable;
       Assert.AreEqual(123456.789, StaticClass.MinIncome);

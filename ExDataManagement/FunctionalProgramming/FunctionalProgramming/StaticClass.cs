@@ -13,14 +13,12 @@ namespace TP.FunctionalProgramming
 {
   /// <summary>
   /// Class StaticClass - demonstrates:
-  ///   - initialization issues for static class
-  ///   - custom serialization
-  ///   - state representation
-  ///   - API representation
+  ///   - initialization
+  ///   - state behavior
   /// </summary>
-  public static class StaticClass//: ISerializable - 'StaticClass': static classes cannot implement interfaces
+  public static class StaticClass
   {
-    //Initialization:
+    #region Initialization
 
     /// <summary>
     /// Static classes cannot have instance constructors
@@ -53,6 +51,8 @@ namespace TP.FunctionalProgramming
       MinIncome = minIncome;
     }
 
+    #endregion Initialization
+
     /// <summary>
     /// Gets or sets the maximum income.
     /// </summary>
@@ -71,7 +71,7 @@ namespace TP.FunctionalProgramming
     /// <value>The average income.</value>
     public static double AverageIncome
     {
-      get { return (MaxIncome + MinIncome) / 2; }
+      get { return (MaxIncome + MinIncome) / 2; }  // result depends on the StaticClass state
     }
   }
 }
