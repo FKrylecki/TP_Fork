@@ -6,27 +6,28 @@
 //
 //  https://github.com/mpostol/TP/discussions/182
 //
-//  by introducing yourself and telling us what you do with this community.
 //_____________________________________________________________________________________________________________________________________
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static TP.FunctionalProgramming.FunctionalProgramming;
 
 namespace TP.FunctionalProgramming
 {
+  //public TP.FunctionalProgramming.FunctionalProgramming variable; //Error CS0723  Cannot declare a variable of static type 'FunctionalProgramming'
+
   /// <summary>
-  /// Summary description for FunctionalProgrammingTest
+  /// Demonstrates usage of the <seealso cref="FunctionalProgramming.StringIsLongPredicate"/>.
   /// </summary>
+  /// <remarks>
+  /// The function result depends only on the value passed as the argument.
+  /// </remarks>
   [TestClass]
   public class FunctionalProgrammingTest
   {
     [TestMethod]
     public void StringIsLongPredicateTest()
     {
-      Assert.IsTrue(StringIsLongPredicate("g5F|z*tC&yKJU$"));
-      Assert.IsFalse(StringIsLongPredicate("g5F|z"));
+      Assert.IsTrue(FunctionalProgramming.StringIsLongPredicate("g5F|z*tC&yKJU$"));
+      Assert.IsFalse(FunctionalProgramming.StringIsLongPredicate("g5F|z"));
     }
-
-    //public TP.FunctionalProgramming.FunctionalProgramming variable; //Error CS0723  Cannot declare a variable of static type 'FunctionalProgramming'
   }
 }

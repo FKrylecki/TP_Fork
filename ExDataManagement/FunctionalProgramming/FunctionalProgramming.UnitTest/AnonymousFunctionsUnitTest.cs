@@ -6,7 +6,6 @@
 //
 //  https://github.com/mpostol/TP/discussions/182
 //
-//  by introducing yourself and telling us what you do with this community.
 //_____________________________________________________________________________________________________________________________________
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
